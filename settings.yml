@@ -1,0 +1,11 @@
+bolletjes: 0.95
+hoorentjes: 1.25
+bakjes: 0.8
+toppings:
+  slagroom: 0.55
+  bottetjes: 0.35
+  caramel:
+    bakje: 0.8
+    hoorentje: 0.6
+liter: 8.99
+btw: 6
