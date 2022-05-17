@@ -57,12 +57,12 @@ def bakOfHorn():
 def smaken(Wat) : 
     global smakenList, intaantal1,intaantal2,intaantal3,aantal2,aantal3,aantal1  
     clear_frame()
-    smaken = ['choco','aardbei','banan']
+    smaken = ['choco','aardbei','banaan']
     TasteRely = 0.22
-    taste = Label(frame,text = f'smaken',bg='black' ,fg='white',width=50,height=2,font=15)
-    taste.place(rely = 0.1, relx= 0.13,anchor='nw')
+    taste = Label(frame,text = f'smaken',bg='black' ,fg='white',width=45,height=2,font=15)
+    taste.place(rely = 0.1, relx= 0.1,anchor='nw')
     hoeveelBol = tk.Label(frame,text='Hoeveel bolletjes wilt u',bg='black' ,fg='white',width=45,height=2,font=15)
-    hoeveelBol.place(rely = 0.2, relx= 0.17,anchor='nw')
+    hoeveelBol.place(rely = 0.2, relx= 0.1,anchor='nw')
     if Wat == True:
         aantaldef(True)
         but1 = tk.Button(frame,text = f'{smaken[0]}',bg='lightblue',font=30,width=10,height=2,command=lambda: smaakaantalHorn(smaken[0]))
@@ -98,7 +98,7 @@ def smakenBakje(soort):
             print(intaantal2,'test2')
             aantal2.config(text=f'{intaantal2}')
             
-        elif soort == 'banan':
+        elif soort == 'banaan':
             intaantal3 += 1
             aantal3.config(text=f'{intaantal3}')
             print(intaantal3,'test3') 
@@ -117,11 +117,12 @@ def smaakaantalHorn(soort):
             print(intaantal2,'test2')
             aantal2.config(text=f'{intaantal2}')
             
-        elif soort == 'banan':
+        elif soort == 'banaan':
             intaantal3 += 1
             aantal3.config(text=f'{intaantal3}')
             print(intaantal3,'test3')   
     volgende()
+
 
     
 def aantaldef(wat):
@@ -158,10 +159,12 @@ def aantaldef(wat):
         aantal3.place(rely = 0.45, relx= 0.62,anchor='nw')
                 
 def volgende():
-    but1 = tk.Button(frame,text = 'Volgende',bg='lightblue',font=30,width=10,height=2,command=lambda: bakOfHorn())
+    but1 = tk.Button(frame,text = 'Volgende',bg='lightblue',font=30,width=10,height=2,command=lambda: rekenen())
     but1.place(rely = 0.9, relx= 0.9,anchor='center')
+
 def rekenen():
-    pass
+    for i,v in enumerate(data):   
+        print(i , v)
         
         
 window = tk.Tk()
@@ -197,7 +200,7 @@ window.mainloop()
 # smakenList.append(aantal)
 # smakenList[0].config(Command=smaakaantal('choco'))
 # smakenList[1].config(Command=smaakaantal('aardbei'))
-# smakenList[2].config(Command=smaakaantal('banan'))
+# smakenList[2].config(Command=smaakaantal('banaan'))
 
 
 # for i in range(3):
